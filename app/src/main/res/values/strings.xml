@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Belajar Bahasa Jepang</string>
+    <string name="telegram">https://t.me/GaluhSaputrii</string>
+    <string name="instagram">Galsap18</string>
+    <string name="facebook">Galuh saputri</string>
+    <string name="img">Gambar</string>
+    <string name="judul">Aplikasi Pengenalan Bahasa Jepang</string>
+    <string name="btnkeluar">Keluar</string>
+    <string name="btntentang">Tentang</string>
+    <string name="judulutama">Pengenalan Bahasa Jepang</string>
+    <string name="play">Let\'s Play</string>
+    <string name="img1">gmbar</string>
+    <string name="btnsuara">TODO</string>
+    <string name="btndaftar">angkajepang</string>
+    <string name="jdul">Informasi Pengembang</string>
+</resources>

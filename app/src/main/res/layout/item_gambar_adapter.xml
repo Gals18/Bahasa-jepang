@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rup tampilan yang menampilkan tampilan turunan
+di posisi relatif. Posisi setiap tampilan dapat ditentukan
+sebagai posisi relatif terhadap elemen yang setara
+(seperti di sebelah kiri atau di bawah tampilan lain)
+atau di posisi relatif terhadap RelativeLayout induk
+(seperti sejajar dengan bagian bawah, kiri, atau tengah). -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- selanjutnya adalah image view,
+     pada bagian ini digunakan untuk view bagian image atau menampilkan gambar yang kita inginkan.
+     dan gambar yang saya masukan adalah gambar untuk data dari repositori lokal dari item gambar adapter.
+     dan untuk ukurannya dimasukan sesuai keinginan kita, jika ingin diperbesar kita
+     dapat menarik mejauh. dan untuk memperkecil menariknya ke dalam.
+     kemudian dalam setiap view juga memerlukan id sebagai tanda khusus. dan id yang digunakan
+     adalah gambarAngkasa-->
+    <ImageView
+        android:id="@+id/gambarAngka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/containerHuruf"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/btndaftar"
+        android:scaleType="centerCrop" />
+
+    <!-- Linear Layout merupakan layout yang berfungsi untuk
+    menampilkan komponen-komponen aplikasi contohnya : teks, tombol,
+    gambar dan lainnya dengan cara vertikal ataupun horizontal. dan id pada linear
+    layout ini adalah containerHuruf-->
+    <LinearLayout
+        android:id="@+id/containerHuruf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2380B6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <!-- berikutnya adalah bagian text view, dimana pada baian ini kita dapat memasukan keterangan
+    berupa kalimat atau data bertipe string atau text. tidak jauh berbeda dengan view lainnya perlu
+    menggunakan id juga yaitu huruf. dan untuk mengatur besar kecilnya ukuran text dapat menggunakan kode textsize.-->
+        <TextView
+            android:id="@+id/huruf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <!-- selanjutnya adalah image view,
+             pada bagian ini digunakan untuk view bagian image atau menampilkan gambar yang kita inginkan.
+             dan gambar yang saya masukan adalah gambar untuk data dari repositori lokal dari item gambar adapter.
+             dan untuk ukurannya dimasukan sesuai keinginan kita, jika ingin diperbesar kita
+             dapat menarik mejauh. dan untuk memperkecil menariknya ke dalam.
+             kemudian dalam setiap view juga memerlukan id sebagai tanda khusus. dan id yang digunakan
+             adalah gambar icon suara dengan tujuan untuk mereplay-->
+        <ImageView
+            android:id="@+id/replay"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="25dp"
+            android:contentDescription="@string/btnsuara" />
+
+    </LinearLayout>
+</RelativeLayout>

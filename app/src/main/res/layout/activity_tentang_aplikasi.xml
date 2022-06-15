@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ConstraintLayout merupakan salah satu komponen ViewGroup
+yang dapat kita gunakan untuk menyusun
+tampilan aplikasi yang kompleks tanpa adanya nested layout.
+ dan apabila kita menggunakan nstrain lebih hemat memori penyimpanan
+ dari pada dengan nested layout atau relative layout-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TentangAplikasi">
+
+    <!-- selanjutnya adalah image view,
+      pada bagian ini digunakan untuk view bagian image atau menampilkan gambar yang kita inginkan.
+      dan gambar yang saya masukan adalah gambar untuk sampul dari activity tentang aplikasi.
+      dan untuk ukurannya dimasukan sesuai keinginan kita, jika ingin diperbesar kita
+      dapat menarik mejauh. dan untuk memperkecil menariknya ke dalam.
+      kemudian dalam setiap view juga memerlukan id sebagai tanda khusus. dan id yang digunakan
+      adalah logo-->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulAplikasi"
+        android:contentDescription="@string/img" />
+
+    <!-- berikutnya adalah bagian text view, dimana pada baian ini kita dapat memasukan keterangan
+    berupa kalimat atau data bertipe string atau text. tidak jauh berbeda dengan view lainnya perlu
+    menggunakan id juga. dan untuk mengatur besar kecilnya ukuran text dapat menggunakan kode textsize.-->
+    <TextView
+        android:id="@+id/judulAplikasi"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:padding="8dp"
+        android:text="@string/jdul"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--sebagai tampilan garis -->
+    <View
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/judulAplikasi"
+        android:layout_marginVertical="25dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/judulAplikasi" />
+
+
+    <!-- berikutnya adalah bagian text view, dimana pada baian ini kita dapat memasukan keterangan
+    berupa kalimat atau data bertipe string atau text. tidak jauh berbeda dengan view lainnya perlu
+    menggunakan id juga. dan untuk mengatur besar kecilnya ukuran text dapat menggunakan kode textsize.-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/telegram"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_telegram"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+    <!-- berikutnya adalah bagian text view, dimana pada baian ini kita dapat memasukan keterangan
+        berupa kalimat atau data bertipe string atau text. tidak jauh berbeda dengan view lainnya perlu
+        menggunakan id juga. dan untuk mengatur besar kecilnya ukuran text dapat menggunakan kode textsize.-->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/instagram"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_instagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <!-- berikutnya adalah bagian text view, dimana pada baian ini kita dapat memasukan keterangan
+        berupa kalimat atau data bertipe string atau text. tidak jauh berbeda dengan view lainnya perlu
+        menggunakan id juga. dan untuk mengatur besar kecilnya ukuran text dapat menggunakan kode textsize.-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/facebook"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:drawableStartCompat="@drawable/ic_facebook" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

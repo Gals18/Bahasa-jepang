@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ConstraintLayout merupakan salah satu komponen ViewGroup
+yang dapat kita gunakan untuk menyusun
+tampilan aplikasi yang kompleks tanpa adanya nested layout.
+ dan apabila kita menggunakan nstrain lebih hemat memori penyimpanan
+ dari pada dengan nested layout atau relative layout-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- selanjutnya adalah image view,
+    pada bagian ini digunakan untuk view bagian image atau menampilkan gambar yang kita inginkan.
+    dan gambar yang saya masukan adalah gambar untuk sampul dari aplikasi saya.
+    dan untuk ukurannya dimasukan sesuai keinginan kita, jika ingin diperbesar kita
+    dapat menarik mejauh. dan untuk memperkecil menariknya ke dalam.
+    kemudian dalam setiap view juga memerlukan id sebagai tanda khusus. dan id yang digunakan
+    adalah icon-->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/jepang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulAplikasi"
+        android:contentDescription="@string/img1" />
+
+<!-- berikutnya adalah bagian text view, dimana pada baian ini kita dapat memasukan keterangan
+berupa kalimat atau data bertipe string atau text. tidak jauh berbeda dengan view lainnya perlu
+menggunakan id juga. dan untuk mengatur besar kecilnya ukuran text dapat menggunakan kode textsize.-->
+    <TextView
+        android:id="@+id/judulAplikasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/white"
+        android:padding="5dp"
+        android:text="@string/judulutama"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--dan selanjutnya adalah bagian button atau lebih disebut tombol. pada bagian ini nantinya akan digunakan
+    untuk membuat tombol keluar, dimana apabila kita mengklik tombol ini kita akan keluar langsung dari aplikasi
+    dan untuk mengeluarkannya nanti akan di jelaskan pada file mainactivity. dan pada button juga diperlukan id yaitu
+    idnya adalah keluar.-->
+    <Button
+        android:id="@+id/keluar"
+        android:layout_width="261dp"
+        android:layout_height="62dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/btnkeluar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tentang" />
+
+    <!--dan selanjutnya adalah bagian button tentang. pada bagian ini nantinya akan digunakan
+   untuk membuat tombol menuju activity tentang aplikasi, nanti akan di jelaskan pada file mainactivity.
+    dan pada button juga diperlukan id yaitu
+   idnya adalah tentang.-->
+    <Button
+        android:id="@+id/tentang"
+        android:layout_width="259dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/orange"
+        android:text="@string/btntentang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letsPlay" />
+
+    <!--dan selanjutnya adalah bagian button lets play. pada bagian ini nantinya akan digunakan
+       untuk membuat tombol menuju activity lets play, nanti akan di jelaskan pada file mainactivity.
+        dan pada button juga diperlukan id yaitu
+       idnya adalah letsplay.-->
+    <Button
+        android:id="@+id/letsPlay"
+        android:layout_width="261dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="52dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/red"
+        android:text="@string/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
